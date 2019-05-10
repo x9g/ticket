@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: db, admin
+  messages:
+    encoding: UTF-8
+
+server:
+  port: 8081
+
+logging:
+  level:
+    root:  info
+    org.springframework:  info
+    org.mybatis:  info
+    com.github.w4o.ticket.admin:  info
+    com.github.w4o.ticket:  info
