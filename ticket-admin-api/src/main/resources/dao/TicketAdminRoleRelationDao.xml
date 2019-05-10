@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.w4o.ticket.admin.dao.TicketAdminRoleRelationDao">
+    <select id="getPermissionList" resultMap="com.github.w4o.ticket.db.mapper.TicketPermissionMapper.BaseResultMap">
+        SELECT
+		    p.*
+        FROM
+            ticket_admin_role_relation ar
+            LEFT JOIN ticket_permission p ON p.role_id = ar.role_id
+        WHERE
+            ar.admin_id = #{adminId}
+    </select>
+</mapper>

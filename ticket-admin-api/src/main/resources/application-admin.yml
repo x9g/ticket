@@ -1,0 +1,16 @@
+ticket:
+  version: @project.version@
+  jwt:
+    token:
+      header: X-Ticket-Admin-Token
+      head: Bearer
+    secret: 4f1aaeeb0a76ac6033c5e61d8b5e3e6f
+    expiration: 604800
+  swagger:
+    enabled: true
+server:
+  error:
+    include-stacktrace: on_trace_param
+mybatis:
+  mapper-locations:
+    - classpath:dao/*.xml
