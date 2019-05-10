@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "e76df16f-0ccb-4d47-b1d3-0cd50f13eaac",
+		"name": "ticket",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "admin-api",
+			"item": [
+				{
+					"name": "/admin/auth/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"username\":\"admin\",\n\"password\":\"123456\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8081/admin/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8081",
+							"path": [
+								"admin",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/admin/auth/logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Ticket-Admin-Token",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImNyZWF0ZWQiOjE1NTc0NjQ0NDgyNTEsImV4cCI6MTU1ODA2OTI0OH0.sD0jzQIwUgjLyikKKT41WCdDjXbbfWYNWVuEZP9KyezF_BlE_anEmUY2-OQl1zeGGkazqZOcz_RRhf6xXZQvBg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8081/admin/auth/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8081",
+							"path": [
+								"admin",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/admin/info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Ticket-Admin-Token",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImNyZWF0ZWQiOjE1NTc0NjQ0NDgyNTEsImV4cCI6MTU1ODA2OTI0OH0.sD0jzQIwUgjLyikKKT41WCdDjXbbfWYNWVuEZP9KyezF_BlE_anEmUY2-OQl1zeGGkazqZOcz_RRhf6xXZQvBg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8081/admin/info",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8081",
+							"path": [
+								"admin",
+								"info"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
